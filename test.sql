@@ -12,7 +12,7 @@ CREATE TABLE students (
     stu_lname varchar(30),
     stu_fname varchar(30),
     student_phone varchar(30),
-    primary key(student_id)
+    primary key(stu_id)
 );
 
 -- Insert tuples into students table
