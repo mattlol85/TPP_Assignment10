@@ -35,6 +35,7 @@ INSERT INTO enroll VALUES(1115, 001, 'A');
 INSERT INTO enroll VALUES(3115, 004, 'B');
 INSERT INTO enroll VALUES(3130, 003, 'A+');
 INSERT INTO enroll VALUES(1115, 002, 'A');
+INSERT INTO enroll VALUES(3115, 001, 'A');
 
 
 -- Courses Table
@@ -66,3 +67,27 @@ INSERT INTO professors VALUES(10, 'Aril', 'Goldberg');
 INSERT INTO professors VALUES(20, 'Wang', 'Alex');
 INSERT INTO professors VALUES(30, 'Chuang', 'Sherry');
 INSERT INTO professors VALUES(40, 'Smithson', 'Jason');
+
+-- Inner join students and enroll those two tables.
+SELECT * 
+FROM students 
+INNER JOIN enroll 
+ON students.stu_id=enroll.stu_id;
+
+-- Inner join students, enroll and courses those three tables.
+SELECT * 
+FROM students 
+INNER JOIN enroll 
+ON students.stu_id=enroll.stu_id 
+INNER JOIN courses 
+ON enroll.course_id = courses.course_id;
+
+-- Inner join studnets, enroll, courses and professors those four tables
+SELECT * 
+FROM students 
+INNER JOIN enroll 
+ON students.stu_id=enroll.stu_id 
+INNER JOIN courses 
+ON enroll.course_id = courses.course_id 
+INNER JOIN professors 
+ON courses.prof_id = professors.prof_id;
