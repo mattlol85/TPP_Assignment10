@@ -2,7 +2,7 @@
 CREATE DATABASE college;
 
 -- Change directory into new college database
-\c college;
+--\c college;
 
 -- Create 4 Inital Tables
 
